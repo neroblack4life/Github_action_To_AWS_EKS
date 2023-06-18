@@ -20,7 +20,7 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secret.AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id: ${{ secret.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2
 
@@ -28,7 +28,7 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - name: Build, tag and push docker image to Amazor ECR
+    - name: Build, tag, and push docker image to Amazon ECR
       env:
         REGISTRY: ${{ step.login-ecr.outputs.registry}}
         REPOSITORY: nero-repo
