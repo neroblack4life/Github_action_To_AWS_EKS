@@ -1,4 +1,4 @@
-name: node-js_app_deploy_to_eks
+name: node_js_app_deploy_to_eks
 on:
   push:
     branches: [ "main" ]
