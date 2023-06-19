@@ -24,7 +24,7 @@ spec:
       containers:
       - name:  nero-nodejs-deploy
         imagePullPolicy: Always
-        image:  $REGISTRY/REPOSITORY:$IMAGE_TAG
+        image:  684348886286.dkr.ecr.eu-west-3.amazonaws.com/nero-repo:1.1
         resources:
           requests:
             cpu: 100m
